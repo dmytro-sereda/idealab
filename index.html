@@ -16,12 +16,12 @@
 			<header class="header" id="header">
 				<div class="header_main">
 					<a href="#" class="main animate__animated animate__fadeInDown"><img src="img/logo.svg" alt="Idea Lab" class="logo"></a>
-					<nav class="nav animate__animated animate__fadeInDown">
-						<a rel="nofollow" rel="noreferrer" class="nav-item" href="">О нас</a>
-						<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Услуги</a>
-						<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Отзывы</a>
-						<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Портфолио</a>
-						<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Вакансии</a>
+					<nav class="nav animate__animated animate__fadeInDown" id="menu">
+						<a rel="nofollow" rel="noreferrer" class="nav-item" href="#numbers">О нас</a>
+						<a rel="nofollow" rel="noreferrer" class="nav-item" href="#products">Услуги</a>
+						<a rel="nofollow" rel="noreferrer" class="nav-item" href="#feedbacks">Отзывы</a>
+						<a rel="nofollow" rel="noreferrer" class="nav-item" href="#portfolio">Портфолио</a>
+						<a rel="nofollow" rel="noreferrer" class="nav-item" href="#jobs">Вакансии</a>
 					</nav>
 					<a href="#" class="phone animate__animated animate__fadeInDown">Заказать звонок</a>
 					<div class="hamburger-menu">
@@ -31,11 +31,11 @@
 					    </label>
 
 					    <ul class="menu__box">
-					      		<li><a class="menu__item" href="#">О нас</a></li>
-								<li><a class="menu__item" href="#">Услуги</a></li>
-								<li><a class="menu__item" href="#">Отзывы</a></li>
-								<li><a class="menu__item" href="#">Портфолио</a></li>
-								<li><a class="menu__item" href="#">Вакансии</a></li>
+					      		<li><a class="menu__item" href="#numbers">О нас</a></li>
+								<li><a class="menu__item" href="#products">Услуги</a></li>
+								<li><a class="menu__item" href="#feedbacks">Отзывы</a></li>
+								<li><a class="menu__item" href="#portfolio">Портфолио</a></li>
+								<li><a class="menu__item" href="#jobs">Вакансии</a></li>
 								<li><a class="menu__item phone" id="btn_menu" href="#">Заказать звонок</a></li>
 					    </ul>
 					</div>
@@ -50,7 +50,7 @@
 					<img src="img/ellipse-one.svg" id="ellipse1" alt="" class="ellipse">
 				</div>
 			</header>
-			<section class="numbers" id="numbers">
+			<section class="numbers" id="numbers" name="numbers">
 				<div class="statistics animate__animated animate__fadeInDown" id="statistics">
 					<div class="statistics_column">
 						<p class="statistics_column_number" id="statistics_column_number1">50+</p>
@@ -70,7 +70,7 @@
 					<img src="img/ellipse-two.svg" id="ellipse2" alt="" class="ellipse">
 				</div>
 			</section>
-			<section class="products" id="products">
+			<section class="products" id="products" name="products">
 				<h2 class="section-heading">Что мы предлагаем</h2>
 				<div class="product-offers">
 					<img src="img/offer-illustration.png" alt="" class="products_image" id="products_image">
@@ -124,7 +124,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="feedbacks" id="feedbacks">
+			<section class="feedbacks" id="feedbacks" name="feedbacks">
 				<h2 class="section-heading">Наши клиенты всегда довольны</h2>
 				<img src="img/ellipse-three.svg" alt="ellipse" class="ellipse" id="ellipse3">
 				<img src="img/ellipse-four.svg" alt="ellipse" class="ellipse" id="ellipse4">
@@ -162,13 +162,13 @@
 					</div>
 				</div>
 			</section>
-			<section class="portfolio" id="portfolio">
+			<section class="portfolio" id="portfolio" name="portfolio">
 				<img src="img/ellipse-six.svg" alt="" class="ellipse" id="ellipse6">
 				<h2 class="section_heading">Примеры наших работ</h2>
 				<div class="portfolio-container">
 					<div class="portfolio-container_column">
-						<div class="portfolio_example">
-							<h3 class="portfolio_example_heading" id="portfolio_example_heading1">Интернет-магазин "Детский мир"</h3>
+						<div class="portfolio_example" id="portfolio_example1">
+							<h3 class="portfolio_example_heading">Интернет-магазин "Детский мир"</h3>
 							<a href="#" class="bttn">Просмотреть</a>
 							<div class="portfolio_example_dark"></div>
 						</div>
@@ -179,8 +179,8 @@
 						</div>
 					</div>
 					<div class="portfolio-container_column">
-						<div class="portfolio_example">
-							<h3 class="portfolio_example_heading" id="portfolio_example_heading3">Landing Page для пекарни "Катюша"</h3>
+						<div class="portfolio_example" id="portfolio_example3">
+							<h3 class="portfolio_example_heading">Landing Page для пекарни "Катюша"</h3>
 							<a href="#" class="bttn">Просмотреть</a>
 							<div class="portfolio_example_dark"></div>
 						</div>
@@ -204,7 +204,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="jobs" id="jobs">
+			<section class="jobs" id="jobs" name="jobs">
 				<h2 class="section_heading" id="jobs_heading">Доступные вакансии</h2>
 				<div class="jobs_container">
 					<div class="jobs_container_column">
@@ -265,5 +265,16 @@
 			</footer>
 		</div>
 	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	 $(document).ready(function(){
+	    $("#menu").on("click","a", function (event) {
+	        event.preventDefault();
+	        var id  = $(this).attr('href'),
+	            top = $(id).offset().top;
+	        $('body,html').animate({scrollTop: top}, 1000);
+	    });
+	});
+	</script>
 </body>
 </html>
