@@ -53,8 +53,12 @@ h4{
 
 .container {
 	width: 1540px;
-	/*позиционирование по центру*/
 	margin: 0 auto; 
+}
+
+.wrapper{
+	position: relative;
+	overflow: hidden;
 }
 
 .header_main, .footer_container{
@@ -492,7 +496,7 @@ a{
 	display: none;
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1966px){
 	.container{
 		width: 1375px;
 	}
@@ -508,11 +512,6 @@ a{
 	#ellipse1 {
     left: -30%;
     top: 771px;
-	}
-
-	#ellipse5 {
-    top: 120%;
-    right: 0;
 	}
 
 	.portfolio_example{
@@ -885,16 +884,14 @@ a{
 
 	.statistics_column{
 		transform: translateY(0);
-		margin: 0 auto;
 		margin-bottom: 20px;
 	}
 
 	.statistics_column_text{
 		width: 80%;
-	    margin: 0 auto;
 	}
 
-	#statistics_column_text2{
+	#statistics_column_text2, .statistics_column_text, .statistics_column{
 		margin: 0 auto;
 	}
 
@@ -911,11 +908,7 @@ a{
 		margin-bottom: 39px;
 	}
 
-	.product-offers_container_column_element_group_heading, .product-offers_container_column_element_group_text, .offer_text_paragraph{
-		width: 100%;
-	}
-
-	.portfolio_example_dark{
+	.product-offers_container_column_element_group_heading, .product-offers_container_column_element_group_text, .offer_text_paragraph, .portfolio_example_dark{
 		width: 100%;
 	}
 
@@ -927,7 +920,9 @@ a{
 		left: 0;
 	}
 
-
+	.portfolio_example_heading, .bttn, .portfolio_example_dark{
+		opacity: 1;
+	}
 }
 
 @media screen and (max-width: 426px){
