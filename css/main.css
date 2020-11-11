@@ -354,14 +354,13 @@ a{
 
 .portfolio_example_heading{
 	text-align: center;
-	margin: 104px 0 0 0 auto;
-	margin-top: 104px;
-	top: 0;
+	top: 30%;
+	left: 15%;
 	opacity: 0;
-	left: 47px;
 	transition: all 0.5s ease-out;
 	z-index: 1;
 	position: absolute;
+	width: 70%;
 }
 
 .portfolio_example:hover .portfolio_example_heading, .portfolio_example:hover .bttn, .portfolio_example:hover .portfolio_example_dark{
@@ -381,38 +380,31 @@ a{
 
 #portfolio_example1{
 	background: #212C42 url('../img/example-one.png') no-repeat;
-	background-size: cover;
-  	background-position: center center;
 }
 
 #portfolio_example2{
 	background: #212C42 url('../img/example-two.png') no-repeat;
-	background-size: cover;
-  	background-position: center center;
 }
 
 #portfolio_example3{
 	background: #212C42 url('../img/example-three.png') no-repeat;
-	background-size: cover;
-  background-position: center center;
 }
 
 #portfolio_example4{
 	background: #212C42 url('../img/example-four.png') no-repeat;
-	background-size: cover;
-  background-position: center center;
 }
 
 #portfolio_example5{
 	background: #212C42 url('../img/example-five.png') no-repeat;
-	background-size: cover;
-  background-position: center center;
 }
 
 #portfolio_example6{
 	background: #212C42 url('../img/example-six.png') no-repeat;
+}
+
+#portfolio_example1, #portfolio_example2, #portfolio_example3, #portfolio_example4, #portfolio_example5, #portfolio_example6{
 	background-size: cover;
-  background-position: center center;
+  	background-position: center center;
 }
 
 #jobs_heading{
