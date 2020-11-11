@@ -365,7 +365,6 @@ a{
 
 .portfolio_example:hover .portfolio_example_heading, .portfolio_example:hover .bttn, .portfolio_example:hover .portfolio_example_dark{
 	transition: all 0.5s ease-in-out;
-	position: absolute;
 	opacity: 1;
 }
 
@@ -523,11 +522,6 @@ a{
 
 	.jobs_container_item{
 		width: 598px;
-	}
-
-	.portfolio_example_heading {
-		left: 7px;
-		top: -15px;
 	}
 
 	.bttn{
@@ -909,11 +903,21 @@ a{
 	}
 
 	.portfolio_example_heading{
-		left: 0;
+		left: 10%;
+    	top: 30%;
+    	width: 80%;
+	}
+
+	#portfolio_example_heading5{
+		top: 20%;
 	}
 
 	.portfolio_example_heading, .bttn, .portfolio_example_dark{
 		opacity: 1;
+	}
+
+	.product-offers_container{
+		border-radius: 44px;
 	}
 }
 
@@ -935,12 +939,11 @@ a{
 		margin-bottom: 30px;
 	}
 
-	.products_image, .jobs_image, .offer_image, .statistics, .portfolio_example{
+	.products_image, .jobs_image, .offer_image, .statistics, .portfolio_example, h2{
 		width: 100%;
 	}
 
 	h2{
-		width: 100%;
 		text-align: left;
 		font-size: 40px;
 	}
@@ -959,6 +962,7 @@ a{
 
 	.product-offers_container{
 		padding: 40px 25px;
+		border-radius: 44px;
 	}
 
 	.footer_logo{
@@ -979,9 +983,6 @@ a{
 
 	#portfolio{
 		padding-top: 45px;
-	}
-
-	.jobs_container_text{
 	}
 
 	.menu__box{
